@@ -6,7 +6,7 @@ const employee = require("./api/routes/employee");
 const leave = require("./api/routes/leave");
 const port = process.env.PORT || 5000;
 
-mongoose.connect("mongodb://localhost:27017/test21", {
+mongoose.connect(process.env.DATABASE_URI || "mongodb://localhost:27017/test21", {
 	useNewUrlParser: true,
 	useUnifiedTopology: true,
 });
